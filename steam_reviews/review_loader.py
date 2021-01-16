@@ -343,6 +343,14 @@ class ReviewLoader:
         return Reviews(int(appid), data)
 
     def load_batch_from_api(self, appids: list, num: int = DEFAULT_NUM_OF_REVIEWS):
+        """
+        Load reviews of several games
+
+        :param appids: a list contrains all the appids
+        :param num: number of review the program will get
+
+        :return: Reviews object
+        """
         reviews = []
         for appid in appids:
             self.parameters['cursor'] = '*'
