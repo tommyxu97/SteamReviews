@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="steam_reviews",
-    version="0.1.1",
+    version="0.1.2",
     author="Haotian Xu",
     author_email="i@xht97.cn",
     description="A package of getting game reviews from steam platform easily, for further text analytics projects.",
