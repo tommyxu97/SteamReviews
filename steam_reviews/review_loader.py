@@ -13,7 +13,7 @@ def _get_api_url():
     return 'https://store.steampowered.com/appreviews/'
 
 
-def _get_headers():
+def _get_user_agent():
     headers = [
         "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50"
         "(KHTML, like Gecko) Version/5.1 Safari/534.50",
@@ -84,7 +84,7 @@ class ReviewLoader:
         self.print_more_info = False
 
         # Fake headers
-        self.headers = _get_headers()
+        self.user_agent = _get_user_agent()
 
     def set_filter(self, review_filter: str):
         """
@@ -258,7 +258,7 @@ class ReviewLoader:
         reviews_ids = None
 
         session = requests.session()
-        session.headers = _get_headers()
+        session.headers['User-Agent'] = _get_user_agent()
 
         # Initial request
         if self.print_more_info:
