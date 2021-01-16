@@ -33,11 +33,15 @@ You can add more parameters to get customized reviews.
 More information can be found in the functions' documents in the source code.
 
 `set_language()` is used  most frequently, it sets the language of the reviews that downloaded by the program.
+All supported language can be found here: https://partner.steamgames.com/doc/store/localization.
 ```python
 from steam_reviews import ReviewLoader
-# Set the language of reviews to 'english'
-reviews = ReviewLoader().set_language('english') \
-                        .load_from_api(1091500, 1000)        
+# Set the language of reviews to english
+reviews_en = ReviewLoader().set_language('english') \
+                        .load_from_api(1091500, 1000)
+# Set the language of reviews to simplified chinese
+reviews_zh = ReviewLoader().set_language('schinese') \
+                        .load_from_api(1091500, 1000)
 ```
 
 ### Load reviews of several games
