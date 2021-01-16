@@ -14,7 +14,7 @@ def _get_api_url():
 
 
 def _get_user_agent():
-    headers = [
+    user_agents = [
         "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50"
         "(KHTML, like Gecko) Version/5.1 Safari/534.50",
         "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 "
@@ -41,7 +41,7 @@ def _get_user_agent():
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
         "Mozilla/5.0 (X11; Linux x86_64; rv:76.0) Gecko/20100101 Firefox/76.0"
     ]
-    return headers[random.randint(0, len(headers) - 1)]
+    return user_agents[random.randint(0, len(user_agents) - 1)]
 
 
 def _get_dummy_data_dict():
