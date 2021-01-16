@@ -13,6 +13,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/TommyXu97/SteamReviews",
     packages=setuptools.find_packages(),
+    install_requires=[
+        'requests',
+        'tqdm'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
